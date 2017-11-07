@@ -24,7 +24,7 @@ public class TelaInicioDoAPP extends JFrame {
 		setVisible(true);
 
 		// nome janela
-		setTitle("Tela Inicio");
+		setTitle("Tela Inicio APP");
 
 		// tamanho janela
 		setSize(360, 678);
@@ -33,9 +33,6 @@ public class TelaInicioDoAPP extends JFrame {
 		setResizable(true);
 
 		setup();
-		
-		
-		
 
 	}
 	

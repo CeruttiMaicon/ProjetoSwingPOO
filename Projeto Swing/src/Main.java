@@ -10,8 +10,8 @@ public class Main {
 		//janela.setVisible(true);
 		
 		//Abrindo Menu LOGIN
-		MenuLogin janelaLogin = new MenuLogin();
-		janelaLogin.setVisible(true);
+		//MenuLogin janelaLogin = new MenuLogin();
+		//janelaLogin.setVisible(true);
 		
 		//Abrindo TelaInicioDoAPP
 		//TelaInicioDoAPP inicio = new TelaInicioDoAPP();
@@ -20,6 +20,10 @@ public class Main {
 		//Abrindo TelaContinueAoCadastro
 		//TelaContinueAoCadastro continuecadastro = new TelaContinueAoCadastro();
 		//continuecadastro.setVisible(true);
+		
+		//Abrindo TelaEscolhaEstiloDeCadastro
+		TelaEscolhaEstiloDeCadastro estilo = new TelaEscolhaEstiloDeCadastro();
+		
 		
 		
 

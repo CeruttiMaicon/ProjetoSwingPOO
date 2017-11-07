@@ -19,7 +19,7 @@ private JLabel label;
 		setVisible(true);
 
 		// nome janela
-		setTitle("Tela Inicio");
+		setTitle("Tela Continue ao Cadastro");
 
 		// tamanho janela
 		setSize(360, 678);
