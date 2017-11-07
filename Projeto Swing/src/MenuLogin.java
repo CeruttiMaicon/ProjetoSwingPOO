@@ -122,6 +122,7 @@ public class MenuLogin extends JFrame {
 				// validar o usuario com um
 				// if?????????????????????????????????????
 				if(retangulo.getText().equals("usuario") && pass.getText().equals("senha123")){
+					label5.setForeground(Color.BLUE);
 					System.out.println("Logou!");
 					label5.setText("Logou");
 				}else{
@@ -129,8 +130,6 @@ public class MenuLogin extends JFrame {
 					label5.setForeground(Color.RED);
 					label5.setText("Login ou senha incorretos");
 				}
-
-				
 			}
 		});
 
