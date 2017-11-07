@@ -13,8 +13,13 @@ public class Main {
 		//MenuLogin janelaLogin = new MenuLogin();
 		//janelaLogin.setVisible(true);
 		
-		TelaInicioDoAPP inicio = new TelaInicioDoAPP();
-		inicio.setVisible(true);
+		//Abrindo TelaInicioDoAPP
+		//TelaInicioDoAPP inicio = new TelaInicioDoAPP();
+		//inicio.setVisible(true);
+		
+		//Abrindo TelaContinueAoCadastro
+		TelaContinueAoCadastro continuecadastro = new TelaContinueAoCadastro();
+		continuecadastro.setVisible(true);
 		
 		
 
