@@ -9,8 +9,13 @@ public class Main {
 		
 		//janela.setVisible(true);
 		
-		MenuLogin janelaLogin = new MenuLogin();
-		janelaLogin.setVisible(true);
+		//Abrindo Menu LOGIN
+		//MenuLogin janelaLogin = new MenuLogin();
+		//janelaLogin.setVisible(true);
+		
+		TelaInicioDoAPP inicio = new TelaInicioDoAPP();
+		inicio.setVisible(true);
+		
 		
 
 	}

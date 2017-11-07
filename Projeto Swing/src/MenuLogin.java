@@ -26,7 +26,7 @@ public class MenuLogin extends JFrame {
 		setTitle("Login");
 
 		// tamanho janela
-		setSize(300, 400);
+		setSize(360, 678);
 
 		// trava o tamanho da jenela
 		setResizable(true);
@@ -52,7 +52,7 @@ public class MenuLogin extends JFrame {
 		label.setFont(new Font("", Font.BOLD, 12));
 
 		// Coordenadas para o Label
-		label.setBounds(10, 19, 280, 40);
+		label.setBounds(40, 219, 280, 40);
 		painel.add(label);
 		
 		//////////////////////////////////////
@@ -64,7 +64,7 @@ public class MenuLogin extends JFrame {
 		label3.setFont(new Font("", Font.BOLD, 12));
 
 		// Coordenadas para o Label
-		label3.setBounds(10, 170, 280, 40);
+		label3.setBounds(40, 370, 280, 40);
 		painel.add(label3);
 
 		//////////////////////////////////////
@@ -79,19 +79,19 @@ public class MenuLogin extends JFrame {
 		label2.setFont(new Font("", Font.BOLD, 12));
 
 		// Coordenadas para o Label
-		label2.setBounds(10, 100, 280, 40);
+		label2.setBounds(40, 300, 280, 40);
 		painel.add(label2);
 
 		////////////////////////////
 		// Retangulo Login
 		JTextField retangulo = new JTextField();
-		retangulo.setBounds(10, 50, 270, 30);
+		retangulo.setBounds(40, 250, 270, 30);
 		painel.add(retangulo);
 
 		///////////////////////////
 		// Retangulo Password
 		JPasswordField pass = new JPasswordField();
-		pass.setBounds(10, 130, 270, 30);
+		pass.setBounds(40, 330, 270, 30);
 		painel.add(pass);
 		
 		
@@ -106,12 +106,12 @@ public class MenuLogin extends JFrame {
 		label5.setFont(new Font("", Font.BOLD, 12));
 
 		// Coordenadas para o Label
-		label5.setBounds(10, 200, 280, 40);
+		label5.setBounds(40, 400, 280, 40);
 		painel.add(label5);
 
 		// Botão
 		JButton butao = new JButton("ENTRAR");
-		butao.setBounds(10, 240, 265, 30);
+		butao.setBounds(40, 440, 265, 30);
 
 		butao.addActionListener(new ActionListener() {
 
