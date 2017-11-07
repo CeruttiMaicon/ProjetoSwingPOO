@@ -44,7 +44,7 @@ public class MenuLogin extends JFrame {
 		painel.setSize(300, 400);
 
 		// Letras Palavra Login
-		JLabel label = new JLabel("Login: ", JLabel.LEFT);
+		JLabel label = new JLabel("Usuário: ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label.setOpaque(true);
@@ -52,8 +52,20 @@ public class MenuLogin extends JFrame {
 		label.setFont(new Font("", Font.BOLD, 12));
 
 		// Coordenadas para o Label
-		label.setBounds(10, 10, 280, 40);
+		label.setBounds(10, 19, 280, 40);
 		painel.add(label);
+		
+		//////////////////////////////////////
+		JLabel label3 = new JLabel("Esqueceu a senha? ", JLabel.LEFT);
+
+		// ajustando transparencia da janela
+		label3.setOpaque(true);
+
+		label3.setFont(new Font("", Font.BOLD, 12));
+
+		// Coordenadas para o Label
+		label3.setBounds(10, 170, 280, 40);
+		painel.add(label3);
 
 		//////////////////////////////////////
 
@@ -98,7 +110,7 @@ public class MenuLogin extends JFrame {
 		painel.add(label5);
 
 		// Botão
-		JButton butao = new JButton("Fazer Login");
+		JButton butao = new JButton("ENTRAR");
 		butao.setBounds(10, 240, 265, 30);
 
 		butao.addActionListener(new ActionListener() {
