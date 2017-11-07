@@ -113,7 +113,7 @@ public class MenuLogin extends JFrame {
 					System.out.println("Logou!");
 					label5.setText("Logou");
 				}else{
-					System.out.println("Não Logou Otario!");
+					System.out.println("Não Logou!");
 					label5.setForeground(Color.RED);
 					label5.setText("Login ou senha incorretos");
 				}
