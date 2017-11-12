@@ -22,7 +22,11 @@ public class Main {
 		//continuecadastro.setVisible(true);
 		
 		//Abrindo TelaEscolhaEstiloDeCadastro
-		TelaEscolhaEstiloDeCadastro estilo = new TelaEscolhaEstiloDeCadastro();
+		//TelaEscolhaEstiloDeCadastro estilo = new TelaEscolhaEstiloDeCadastro();
+		
+		//Abrindo Tela Cadastro
+		Cadastro cadastro = new Cadastro();
+		cadastro.setVisible(true);
 		
 		
 		
