@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 
 public class CadastroFoto extends JFrame {
-	
+
 	private int min = 0, max = 2, ini = 1;
 
 	public CadastroFoto() {
@@ -88,6 +88,15 @@ public class CadastroFoto extends JFrame {
 		butao.setBounds(40, 500, 265, 30);
 
 		painel.add(butao);
+
+		/////////////////////////////////////////////
+
+		// Botão
+
+		JButton butao2 = new JButton("Pular Etapa");
+		butao2.setBounds(40, 540, 265, 30);
+
+		painel.add(butao2);
 
 		/////////////////////////////////////////////
 

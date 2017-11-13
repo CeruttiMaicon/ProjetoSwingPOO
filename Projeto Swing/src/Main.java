@@ -28,11 +28,18 @@ public class Main {
 		//Cadastro cadastro = new Cadastro();
 		//cadastro.setVisible(true);
 		
-		//Cadastro cadastrar = new Cadastro();
-		//cadastrar.setVisible(true);
-	
-		CadastroFoto foto = new CadastroFoto();
-		foto.setVisible(true);
+		
+		//Abrindo Tela Cadastro Foto
+		//CadastroFoto foto = new CadastroFoto();
+		//foto.setVisible(true);
+		
+		//Abrindo Tela Conclusão Cadastro Foto
+		CadastroPronto cadastrop = new CadastroPronto();
+		cadastrop.setVisible(true);
+		
+		
+		
+		
 		
 
 	}
