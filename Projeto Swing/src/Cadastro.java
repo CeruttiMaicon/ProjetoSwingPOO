@@ -12,10 +12,20 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
+import javax.swing.JSlider;
+import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
+import javax.swing.SpinnerDateModel;
+import javax.swing.SpinnerModel;
 
 public class Cadastro extends JFrame {
+	
+	//Usar isso nas telas de cadastro nos JSLIDERS
+	//aqui o valor ini = 0
+	private int min = 0;
+	private int max = 2;
+	private int ini = 0;
 
 	private JLabel label;
 
@@ -48,25 +58,20 @@ public class Cadastro extends JFrame {
 		painel.setLayout(null);
 		painel.setSize(300, 470);
 
-		// Criando um segundo painel para servir de 
-		//rolagem dentro do painel principal
+		// Criando um segundo painel para servir de
+		// rolagem dentro do painel principal
 		JPanel lista = new JPanel();
 		lista.setLayout(null);
-		
-		//Acrescenta a barra de rolagem no painel 'lista'
-		lista.setPreferredSize(new Dimension(250,800));
-		
 
-		
+		// Acrescenta a barra de rolagem no painel 'lista'
+		lista.setPreferredSize(new Dimension(250, 670));
+
 		JScrollPane listScroller = new JScrollPane(lista);
-		
-		
 
 		listScroller.setSize(300, 470);
-		listScroller.setBounds(25, 95, 300, 470);
+		listScroller.setBounds(25, 75, 300, 470);
 		listScroller.setVisible(true);
-		//listScroller.setLocation(null);
-		
+		// listScroller.setLocation(null);
 
 		////////////////////////////////////////////////////
 
@@ -81,7 +86,7 @@ public class Cadastro extends JFrame {
 		label1.setFont(new Font("", Font.BOLD, 20));
 
 		// Coordenadas para o Label
-		label1.setBounds(40, 20, 280, 40);
+		label1.setBounds(40, 5, 280, 40);
 		painel.add(label1);
 
 		// Palavras do Cabeçalho parte 2
@@ -95,15 +100,15 @@ public class Cadastro extends JFrame {
 		label0.setFont(new Font("", Font.BOLD, 20));
 
 		// Coordenadas para o Label
-		label0.setBounds(40, 50, 280, 40);
+		label0.setBounds(40, 35, 280, 40);
 		painel.add(label0);
 
 		//
 
 		///////////////////////////////////////////////////
 
-		// Letras Palavra Nome
-		JLabel label = new JLabel("Nome:  ", JLabel.LEFT);
+		// Letras Palavra Usuario
+		JLabel label = new JLabel("Usuario:  ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label.setOpaque(true);
@@ -115,7 +120,7 @@ public class Cadastro extends JFrame {
 		lista.add(label);
 
 		////////////////////////////
-		// Retangulo Nome
+		// Retangulo Usuario
 		JTextField retangulo1 = new JTextField();
 		retangulo1.setBounds(10, 50, 270, 30);
 		lista.add(retangulo1);
@@ -124,9 +129,9 @@ public class Cadastro extends JFrame {
 
 		//////////////////////////////////////
 
-		// Letras Palavra CPF:
+		// Letras Palavra Senha:
 
-		JLabel label2 = new JLabel("CPF: ", JLabel.LEFT);
+		JLabel label2 = new JLabel("Senha: ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label2.setOpaque(true);
@@ -138,16 +143,16 @@ public class Cadastro extends JFrame {
 		lista.add(label2);
 
 		///////////////////////////
-		// Retangulo CPF
-		JTextField retangulo2 = new JTextField();
+		// Retangulo Senha
+		JPasswordField retangulo2 = new JPasswordField();
 		retangulo2.setBounds(10, 130, 270, 30);
 		lista.add(retangulo2);
 
 		/////////////////////////////////////////
 
-		// Letras Palavra RG
+		// Letras Palavra "Repitir Senha"
 
-		JLabel label3 = new JLabel("RG:  ", JLabel.LEFT);
+		JLabel label3 = new JLabel("Repetir Senha:  ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label3.setOpaque(true);
@@ -161,16 +166,16 @@ public class Cadastro extends JFrame {
 		//////////////////////////////////////
 
 		///////////////////////////
-		// Retangulo RG
-		JTextField retangulo3 = new JTextField();
+		// Retangulo "Repetir Senha"
+		JPasswordField retangulo3 = new JPasswordField();
 		retangulo3.setBounds(10, 210, 270, 30);
 		lista.add(retangulo3);
 
 		////////////////////////////////////////////
 
-		// Letras Palavra Endereço
+		// Letras Palavra "Nome"
 
-		JLabel label4 = new JLabel("Endereço:  ", JLabel.LEFT);
+		JLabel label4 = new JLabel("Nome completo:  ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label4.setOpaque(true);
@@ -184,15 +189,15 @@ public class Cadastro extends JFrame {
 		//////////////////////////////////////
 
 		///////////////////////////
-		// Retangulo Endereço
+		// Retangulo "Nome"
 		JTextField retangulo4 = new JTextField();
 		retangulo4.setBounds(10, 290, 270, 30);
 		lista.add(retangulo4);
 
 		////////////////////////////////////////////
-		// Letras Palavra Ano Nascimento
+		// Letras Palavra "CEP"
 
-		JLabel label5 = new JLabel("Ano Nascimento:  ", JLabel.LEFT);
+		JLabel label5 = new JLabel("CEP:  ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label5.setOpaque(true);
@@ -206,16 +211,16 @@ public class Cadastro extends JFrame {
 		//////////////////////////////////////
 
 		///////////////////////////
-		// Retangulo Ano Nascimento
+		// Retangulo "CEP"
 		JTextField retangulo5 = new JTextField();
 		retangulo5.setBounds(10, 370, 270, 30);
 		lista.add(retangulo5);
 
 		////////////////////////////////////////////
 
-		// Letras Palavra E-mail
+		// Letras "CPF"
 
-		JLabel label6 = new JLabel("E-mail:  ", JLabel.LEFT);
+		JLabel label6 = new JLabel("CPF:  ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label6.setOpaque(true);
@@ -229,16 +234,16 @@ public class Cadastro extends JFrame {
 		//////////////////////////////////////
 
 		///////////////////////////
-		// Retangulo E-mail
+		// Retangulo CPF
 		JTextField retangulo6 = new JTextField();
 		retangulo6.setBounds(10, 450, 270, 30);
 		lista.add(retangulo6);
 
 		////////////////////////////////////////////
 
-		// Letras Palavra "SEM PALAVRA"
+		// Letras Palavra "Endereço"
 
-		JLabel label7 = new JLabel("'EDITAR'  ", JLabel.LEFT);
+		JLabel label7 = new JLabel("Endereço:  ", JLabel.LEFT);
 
 		// ajustando transparencia da janela
 		label7.setOpaque(true);
@@ -252,22 +257,60 @@ public class Cadastro extends JFrame {
 		//////////////////////////////////////
 
 		///////////////////////////
-		// Retangulo "SEM PALAVRA"
+		// Retangulo "Endereço"
 		JTextField retangulo7 = new JTextField();
 		retangulo7.setBounds(10, 530, 270, 30);
 		lista.add(retangulo7);
 
 		////////////////////////////////////////////
 
+		// Letras Palavra "Data de Nascimento"
+
+		JLabel label8 = new JLabel("Data de Nascimento:  ", JLabel.LEFT);
+
+		// ajustando transparencia da janela
+		label8.setOpaque(true);
+
+		label8.setFont(new Font("", Font.BOLD, 12));
+
+		// Coordenadas para o Label
+		label8.setBounds(10, 570, 280, 40);
+		lista.add(label8);
+
+		//////////////////////////////////////
+
+		///////////////////////////
+		// Retangulo "Data de Nascimento"
+		SpinnerModel model = new SpinnerDateModel();
+
+		JSpinner recData = new JSpinner(model);
+
+		recData.setBounds(10, 610, 70, 30);
+		lista.add(recData);
+
+		////////////////////////////////////////////
+
 		// Botão
-		JButton butao = new JButton("Proximo");
-		butao.setBounds(40, 570, 265, 30);
+
+		JButton butao = new JButton("Próximo");
+		butao.setBounds(40, 555, 265, 30);
 
 		painel.add(butao);
 
 		add(painel);
 		painel.add(listScroller);
+
+		/////////////////////////////////////////////
+
+		// JSlider - para mostrar o progresso
+
+		JSlider slider = new JSlider(JSlider.HORIZONTAL, min, max, ini);
+
+		slider.setBounds(30, 578, 280, 40);
 		
+		painel.add(slider);
+
+		////////////////////////////////////////////////
 
 	}
 
