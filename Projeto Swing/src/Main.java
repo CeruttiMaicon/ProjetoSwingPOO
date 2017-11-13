@@ -25,8 +25,11 @@ public class Main {
 		//TelaEscolhaEstiloDeCadastro estilo = new TelaEscolhaEstiloDeCadastro();
 		
 		//Abrindo Tela Cadastro
-		Cadastro cadastro = new Cadastro();
-		cadastro.setVisible(true);
+		//Cadastro cadastro = new Cadastro();
+		//cadastro.setVisible(true);
+		
+		TesteDeLista teste = new TesteDeLista();
+		teste.setVisible(true);
 		
 		
 		
