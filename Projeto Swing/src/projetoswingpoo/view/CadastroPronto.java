@@ -1,39 +1,71 @@
+<<<<<<< HEAD:Projeto Swing/src/projetoswingpoo/view/CadastroPronto.java
 package projetoswingpoo.view;
 
+=======
+import javax.swing.JButton;
+>>>>>>> 7ae5a73b264f7694ce520bfb29daa4334bd40ce0:Projeto Swing/src/CadastroPronto.java
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JSlider;
 
 public class CadastroPronto extends JFrame {
-	
-	private int min = 0, max = 2, ini = 2;
 
+<<<<<<< HEAD:Projeto Swing/src/projetoswingpoo/view/CadastroPronto.java
 	
 	public CadastroPronto(){
+=======
+	private int min = 0, max = 2, ini = 2;
 
-			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public CadastroPronto() {
+>>>>>>> 7ae5a73b264f7694ce520bfb29daa4334bd40ce0:Projeto Swing/src/CadastroPronto.java
 
-			// Exibe janela
-			setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-			// nome janela
-			setTitle("Cadastro Foto");
+		// Exibe janela
+		setVisible(true);
 
-			// tamanho janela
-			setSize(360, 678);
+		// nome janela
+		setTitle("Cadastro Foto");
 
-			// trava o tamanho da jenela
-			setResizable(true);
+		// tamanho janela
+		setSize(360, 678);
 
-			setup();
+		// trava o tamanho da jenela
+		setResizable(true);
+
+		setup();
 	}
-	
-	private void setup(){
+
+	private void setup() {
 		JPanel painel = new JPanel();
 		painel.setLayout(null);
 		painel.setSize(300, 470);
 
-		
-		
+		////////////////////////////////////////////
+
+		// Botão
+
+		JButton butao = new JButton("Próximo");
+		butao.setBounds(40, 555, 265, 30); // (Lado esquerdo, Cima para baixo,
+											// Tamanho largura, Tamanho altura)
+
+		painel.add(butao);
+		add(painel);
+
+		/////////////////////////////////////////////
+
+		/////////////////////////////////////////////
+
+		// JSlider - para mostrar o progresso
+
+		JSlider slider = new JSlider(JSlider.HORIZONTAL, min, max, ini);
+
+		slider.setBounds(30, 578, 280, 40);
+
+		painel.add(slider);
+
+		////////////////////////////////////////////////
+
 	}
 
 }
