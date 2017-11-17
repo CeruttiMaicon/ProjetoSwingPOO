@@ -1,3 +1,4 @@
+package projetoswingpoo.view;
 import javax.swing.JFrame;
 import java.awt.Color;
 import java.awt.Font;
