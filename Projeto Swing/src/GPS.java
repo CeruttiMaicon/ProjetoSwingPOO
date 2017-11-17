@@ -32,7 +32,7 @@ public class GoogleMapsDemo {
 		// create a GUI component that loads the image: image.jpg
 		//
 		ImageIcon imageIcon = new ImageIcon(
-				(new ImageIcon("image.jpg")).getImage().getScaledInstance(630, 600, java.awt.Image.SCALE_SMOOTH));
+				(new ImageIcon("image.jpg")).getImage().getScaledInstance(360, 678, java.awt.Image.SCALE_SMOOTH));
 		test.add(new JLabel(imageIcon));
 		// show the GUI window
 		test.setVisible(true);
