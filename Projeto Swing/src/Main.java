@@ -25,8 +25,8 @@ public class Main {
 		//TelaEscolhaEstiloDeCadastro estilo = new TelaEscolhaEstiloDeCadastro();
 		
 		//Abrindo Tela Cadastro
-		Cadastro cadastro = new Cadastro();
-		cadastro.setVisible(true);
+		//Cadastro cadastro = new Cadastro();
+		//cadastro.setVisible(true);
 		
 		
 		//Abrindo Tela Cadastro Foto
@@ -34,8 +34,8 @@ public class Main {
 		//foto.setVisible(true);
 		
 		//Abrindo Tela Conclusão Cadastro Foto
-		//CadastroPronto cadastrop = new CadastroPronto();
-		//cadastrop.setVisible(true);
+		CadastroPronto cadastrop = new CadastroPronto();
+		cadastrop.setVisible(true);
 		
 		
 		

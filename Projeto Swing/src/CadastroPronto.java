@@ -7,9 +7,6 @@ public class CadastroPronto extends JFrame {
 
 	
 	public CadastroPronto(){
-		
-
-		
 
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
