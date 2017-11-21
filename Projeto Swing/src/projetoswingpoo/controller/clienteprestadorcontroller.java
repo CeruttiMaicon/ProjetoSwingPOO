@@ -31,7 +31,21 @@ public class clienteprestadorcontroller {
 		model.setDatanascimento(view.getData());
 		model.setNomecompleto(view.getNome());
 		model.setEndereco(view.getEndereco());
-		System.out.println("Save cliente");
+		if (view.getUsuario().length() < 1){
+			view.setErrorMessage("favor preencher o campo USUÁRIO");
+		}else if(view.getSenhatext().length() <1){
+			view.setErrorMessage("Favor preencher o campo SENHA");
+		}else if(view.getSenhatext().length()<8){
+			view.setErrorMessage("A senha deve ter no mínimo 8 caracteres");
+		}else if(view.getCEP().length() <1){
+			view.setErrorMessage("Favor preencher o campo CEP");
+		}else if(view.getCPF().length() < 1){
+			view.setErrorMessage("Favor preencher o campo CPF");
+		}else if(view.getNome().length() < 1){
+			view.setErrorMessage("Favor preencher o campo NOME COMPLETO");
+		}else{
+			view.setSuccessMessage("Informações armazenadas com sucesso!");
+		}
 
 	}
 	

@@ -41,6 +41,7 @@ public class Cadastro extends JFrame {
 	private JTextField enderecotext;
 	private JSpinner recdata;
 	private JButton botaoproximo;
+	private JLabel statusLabel;
 	
 	public String getUsuario(){
 		return usuariotext.getText();
@@ -65,6 +66,16 @@ public class Cadastro extends JFrame {
 	}
 	public JButton getBotao(){
 		return botaoproximo;
+	}
+	
+	public void setErrorMessage(String msg){
+		statusLabel.setText(msg);
+		statusLabel.setForeground(Color.RED);
+	}
+	
+	public void setSuccessMessage(String msg){
+		statusLabel.setText(msg);
+		statusLabel.setForeground(Color.BLUE);
 	}
 	
 	
@@ -331,7 +342,17 @@ public class Cadastro extends JFrame {
 		painel.add(slider);
 
 		////////////////////////////////////////////////
-
+		
+		////////////////////////////////////////////////
+		
+		// JLabel - mostra a mensagem se o cadastro foi ou não efetuado com sucesso
+		
+		statusLabel = new JLabel();
+		statusLabel.setBounds(80,100,300,30);
+		
+		////////////////////////////////////////////////
+		
+		
 	}
 
 
