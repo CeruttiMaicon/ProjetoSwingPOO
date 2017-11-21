@@ -1,6 +1,7 @@
 package projetoswingpoo.main;
 import javax.swing.JFrame;
 
+import projetoswingpoo.controller.clienteprestadorcontroller;
 import projetoswingpoo.view.Cadastro;
 import projetoswingpoo.view.CadastroPronto;
 
@@ -31,6 +32,7 @@ public class Main {
 		//Abrindo Tela Cadastro
 		//Cadastro cadastro = new Cadastro();
 		//cadastro.setVisible(true);
+		clienteprestadorcontroller controller = new clienteprestadorcontroller();
 		
 		
 		//Abrindo Tela Cadastro Foto
@@ -38,8 +40,8 @@ public class Main {
 		//foto.setVisible(true);
 		
 		//Abrindo Tela Conclusão Cadastro Foto
-		CadastroPronto cadastrop = new CadastroPronto();
-		cadastrop.setVisible(true);
+		//CadastroPronto cadastrop = new CadastroPronto();
+		//cadastrop.setVisible(true);
 		
 		
 		

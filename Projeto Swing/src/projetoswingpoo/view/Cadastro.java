@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
@@ -28,8 +29,46 @@ public class Cadastro extends JFrame {
 	private int min = 0;
 	private int max = 2;
 	private int ini = 0;
+	
 
+	
 	private JLabel label;
+	private JTextField usuariotext;
+	private JPasswordField senhatext;
+	private JTextField nometext;
+	private JTextField ceptext;
+	private JTextField cpftext;
+	private JTextField enderecotext;
+	private JSpinner recdata;
+	private JButton botaoproximo;
+	
+	public String getUsuario(){
+		return usuariotext.getText();
+	}
+	public String getSenhatext(){
+		return senhatext.getText();
+	}
+	public String getNome(){
+		return nometext.getText();
+	}
+	public String getCEP(){
+		return ceptext.getText();
+	}
+	public String getCPF(){
+		return cpftext.getText();
+	}
+	public String getEndereco(){
+		return enderecotext.getText();
+	}
+	public Date getData(){
+		return (Date)recdata.getModel().getValue();
+	}
+	public JButton getBotao(){
+		return botaoproximo;
+	}
+	
+	
+	
 
 	public Cadastro() {
 
@@ -123,9 +162,9 @@ public class Cadastro extends JFrame {
 
 		////////////////////////////
 		// Retangulo Usuario
-		JTextField retangulo1 = new JTextField();
-		retangulo1.setBounds(10, 50, 270, 30);
-		lista.add(retangulo1);
+		usuariotext = new JTextField();
+		usuariotext.setBounds(10, 50, 270, 30);
+		lista.add(usuariotext);
 
 		//////////////////////////////////////
 
@@ -146,32 +185,11 @@ public class Cadastro extends JFrame {
 
 		///////////////////////////
 		// Retangulo Senha
-		JPasswordField retangulo2 = new JPasswordField();
-		retangulo2.setBounds(10, 130, 270, 30);
-		lista.add(retangulo2);
+		senhatext = new JPasswordField();
+		senhatext.setBounds(10, 130, 270, 30);
+		lista.add(senhatext);
 
 		/////////////////////////////////////////
-
-		// Letras Palavra "Repitir Senha"
-
-		JLabel label3 = new JLabel("Repetir Senha:  ", JLabel.LEFT);
-
-		// ajustando transparencia da janela
-		label3.setOpaque(true);
-
-		label3.setFont(new Font("", Font.BOLD, 12));
-
-		// Coordenadas para o Label
-		label3.setBounds(10, 170, 280, 40);
-		lista.add(label3);
-
-		//////////////////////////////////////
-
-		///////////////////////////
-		// Retangulo "Repetir Senha"
-		JPasswordField retangulo3 = new JPasswordField();
-		retangulo3.setBounds(10, 210, 270, 30);
-		lista.add(retangulo3);
 
 		////////////////////////////////////////////
 
@@ -192,9 +210,9 @@ public class Cadastro extends JFrame {
 
 		///////////////////////////
 		// Retangulo "Nome"
-		JTextField retangulo4 = new JTextField();
-		retangulo4.setBounds(10, 290, 270, 30);
-		lista.add(retangulo4);
+		nometext = new JTextField();
+		nometext.setBounds(10, 290, 270, 30);
+		lista.add(nometext);
 
 		////////////////////////////////////////////
 		// Letras Palavra "CEP"
@@ -214,9 +232,9 @@ public class Cadastro extends JFrame {
 
 		///////////////////////////
 		// Retangulo "CEP"
-		JTextField retangulo5 = new JTextField();
-		retangulo5.setBounds(10, 370, 270, 30);
-		lista.add(retangulo5);
+		ceptext = new JTextField();
+		ceptext.setBounds(10, 370, 270, 30);
+		lista.add(ceptext);
 
 		////////////////////////////////////////////
 
@@ -237,9 +255,9 @@ public class Cadastro extends JFrame {
 
 		///////////////////////////
 		// Retangulo CPF
-		JTextField retangulo6 = new JTextField();
-		retangulo6.setBounds(10, 450, 270, 30);
-		lista.add(retangulo6);
+		cpftext = new JTextField();
+		cpftext.setBounds(10, 450, 270, 30);
+		lista.add(cpftext);
 
 		////////////////////////////////////////////
 
@@ -260,9 +278,9 @@ public class Cadastro extends JFrame {
 
 		///////////////////////////
 		// Retangulo "Endereço"
-		JTextField retangulo7 = new JTextField();
-		retangulo7.setBounds(10, 530, 270, 30);
-		lista.add(retangulo7);
+		enderecotext = new JTextField();
+		enderecotext.setBounds(10, 530, 270, 30);
+		lista.add(enderecotext);
 
 		////////////////////////////////////////////
 
@@ -285,19 +303,19 @@ public class Cadastro extends JFrame {
 		// Retangulo "Data de Nascimento"
 		SpinnerModel model = new SpinnerDateModel();
 
-		JSpinner recData = new JSpinner(model);
+		recdata = new JSpinner(model);
 
-		recData.setBounds(10, 610, 70, 30);
-		lista.add(recData);
+		recdata.setBounds(10, 610, 70, 30);
+		lista.add(recdata);
 
 		////////////////////////////////////////////
 
 		// Botão
 
-		JButton butao = new JButton("Próximo");
-		butao.setBounds(40, 555, 265, 30);
+		botaoproximo = new JButton("Próximo");
+		botaoproximo.setBounds(40, 555, 265, 30);
 
-		painel.add(butao);
+		painel.add(botaoproximo);
 
 		add(painel);
 		painel.add(listScroller);

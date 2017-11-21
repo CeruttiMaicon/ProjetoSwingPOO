@@ -7,8 +7,8 @@ public class clienteprestador {
 	public String usuario;
 	public String senha;
 	public String nomecompleto;
-	public int CEP;
-	public int CPF;
+	public String CEP;
+	public String CPF;
 	public String endereco;
 	public Date datanascimento;
 	
@@ -30,16 +30,16 @@ public class clienteprestador {
 	public void setNomecompleto(String nomecompleto) {
 		this.nomecompleto = nomecompleto;
 	}
-	public int getCEP() {
+	public String getCEP() {
 		return CEP;
 	}
-	public void setCEP(int cEP) {
+	public void setCEP(String cEP) {
 		CEP = cEP;
 	}
-	public int getCPF() {
+	public String getCPF() {
 		return CPF;
 	}
-	public void setCPF(int cPF) {
+	public void setCPF(String cPF) {
 		CPF = cPF;
 	}
 	public String getEndereco() {
