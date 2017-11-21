@@ -1,17 +1,22 @@
 package projetoswingpoo.view;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class GoogleMapsDemo {
+public class GPS {
 	public static void main(String[] args) throws IOException {
 		JFrame test = new JFrame("Google Maps");
 		try {
-			String latitude = "-26.2759174";
-			String longitude = "-73.998672";
+			String latitude = "-26.2526029";
+			String longitude = "-48.8553097";
 			String imageUrl = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude
-					+ "&zoom=11&size=612x612&scale=2&maptype=roadmap";
+					+ "&zoom=15&size=360x678&scale=2&maptype=roadmap";
 			String destinationFile = "image.jpg";
 			// read the map image from Google
 			// then save it to a local file: image.jpg
