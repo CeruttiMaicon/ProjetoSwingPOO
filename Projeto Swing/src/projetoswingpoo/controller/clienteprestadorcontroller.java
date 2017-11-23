@@ -24,19 +24,13 @@ public class clienteprestadorcontroller {
 	}
 	
 	private void savecliente(){
-		model.setUsuario(view.getUsuario());
-		model.setSenha(view.getSenhatext());
-		model.setCEP(view.getCEP());
-		model.setCPF(view.getCPF());
-		model.setDatanascimento(view.getData());
-		model.setNomecompleto(view.getNome());
-		model.setEndereco(view.getEndereco());
+
 		if (view.getUsuario().length() < 1){
-			view.setErrorMessage("favor preencher o campo USUÁRIO");
+			view.setErrorMessage("favor preencher o campo USUÃRIO");
 		}else if(view.getSenhatext().length() <1){
 			view.setErrorMessage("Favor preencher o campo SENHA");
 		}else if(view.getSenhatext().length()<8){
-			view.setErrorMessage("A senha deve ter no mínimo 8 caracteres");
+			view.setErrorMessage("A senha deve ter no mÃ­nimo 8 caracteres");
 		}else if(view.getCEP().length() <1){
 			view.setErrorMessage("Favor preencher o campo CEP");
 		}else if(view.getCPF().length() < 1){
@@ -44,7 +38,14 @@ public class clienteprestadorcontroller {
 		}else if(view.getNome().length() < 1){
 			view.setErrorMessage("Favor preencher o campo NOME COMPLETO");
 		}else{
-			view.setSuccessMessage("Informações armazenadas com sucesso!");
+			model.setUsuario(view.getUsuario());
+			model.setSenha(view.getSenhatext());
+			model.setCEP(view.getCEP());
+			model.setCPF(view.getCPF());
+			model.setDatanascimento(view.getData());
+			model.setNomecompleto(view.getNome());
+			model.setEndereco(view.getEndereco());
+			view.setSuccessMessage("InformaÃ§Ãµes armazenadas com sucesso!");
 		}
 
 	}
