@@ -21,7 +21,11 @@ public class ClientePrestadorDAO {
 	
 	public void saveinfo(clienteprestador model){
 		
-		String sql = "Insert into clienteprestador"
+		String sql = "Insert into clienteprestador(CPF,RG,CEP,endereco,datanascimento,nomeprestador,usuario,senha)"+
+			"values(?,?,?,?,?,?,?,?);";
+		try{
+			PreparedStatement stmt = (PreparedStatement) mConn.prepareStatement(sql);
+		}
 
 		
 	}
